@@ -1,0 +1,63 @@
+name: HTGUniversalPluginBukkit
+version: '0.0.0'
+main: pl.htgmc.Main
+api-version: '1.20'
+load: STARTUP
+authors: [ ToJaWGYT ]
+description: Universal Plugin Minecraft
+website: https://htgmc.odoo.com/en/htgglobalplugins
+
+permissions:
+  htgmc.admin.setspawn:
+    description: Pozwala ustawić punkt spawn na obecnej lokacji
+    default: op # Można ustawić, że tylko operatorzy mają dostęp do tej komendy
+  htgmc.premiun:
+    description: Pozwala komendy dla rang premiun
+    default: op # Można ustawić, że tylko operatorzy mają dostęp do tej komendy
+
+commands:
+  # Dla Graczów Bez Uprawienia (Dół)
+  help:
+    description: Komenda pomocy
+  msg:
+    description: Wyślij wiadomość do innego gracza
+  spawn:
+    description: Teleportuje gracza do punktu spawn
+  helpop:
+    description: Wysyła prośbę o pomoc do administratorów.
+  strona:
+    description: Wyświetla link do strony internetowej.
+  discord:
+    description: Wyświetla link do Discorda.
+# Dla Graczów Bez Uprawienia (GÓRA)
+#
+# Dla Graczów Z Uprawieniami (DÓŁ)
+  feed:
+    description: Nakarmienie gracza.
+    usage: /feed
+  heal:
+    description: Leczenie gracza.
+    usage: /heal
+  fly:
+    description: Włączanie/wyłączanie latania.
+    usage: /fly
+  enderchest:
+    description: Otwieranie Ender Chest.
+    usage: /enderchest
+  repair:
+    description: Naprawianie przedmiotów w ekwipunku.
+    usage: /repair
+# Dla VIP Z Uprawieniami (GÓRA)
+#
+# Dla Youtuber Z Uprawieniami (DÓŁ)
+  recording:
+    description: Naprawianie przedmiotów w ekwipunku.
+    usage: /recording
+# Dla Youtuber Z Uprawieniami (GÓRA)
+#
+# Dla Administracji Z Uprawieniami (DÓŁ)
+  setspawn:
+    description: Ustawia punkt spawn na obecnej lokacji gracza
+    usage: /setspawn
+# Dla Graczów Z Uprawieniami (DÓŁ)
+
